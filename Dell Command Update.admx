@@ -1,0 +1,683 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" ><!--Created using ADM Template Editor V4.2.22-->
+<!--Created on 04 Feb 2022 09:47:33-->
+<!--ADM Template Editor is marketed by Syspro. Visit us at www.sysprosoft.com-->
+
+	<policyNamespaces >
+		<target prefix="DellCommandUpdate" namespace="Sysprosoft.ADM_Editor.Dell Command Update" />
+	</policyNamespaces>
+	<supersededAdm fileName="Dell Command Update.adm" />
+	<resources minRequiredRevision="1.0" fallbackCulture="en-us" />
+	<supportedOn >
+		<definitions >
+			<definition name="SupportedOn_1" displayName="$(string.String_SupportedOn_Windows_10_Windows_2)" />
+			<definition name="SupportedOn_178" displayName="$(string.String_SupportedOn_Undefined_179)" />
+		</definitions>
+	</supportedOn>
+	<categories ><!--Storage for Category Definitions-->
+
+		<category name="Cat_Dell_Command_Update_3" displayName="$(string.String_Cat_Dell_Command_Update_4)" />
+		<category name="Cat_Device_Category_5" displayName="$(string.String_Cat_Device_Category_6)" >
+			<parentCategory ref="Cat_Dell_Command_Update_3" />
+		</category>
+		<category name="Cat_Recommended_Levels_7" displayName="$(string.String_Cat_Recommended_Levels_8)" >
+			<parentCategory ref="Cat_Dell_Command_Update_3" />
+		</category>
+		<category name="Cat_Update_Settings_9" displayName="$(string.String_Cat_Update_Settings_10)" >
+			<parentCategory ref="Cat_Dell_Command_Update_3" />
+		</category>
+		<category name="Cat_Update_Types_11" displayName="$(string.String_Cat_Update_Types_12)" >
+			<parentCategory ref="Cat_Dell_Command_Update_3" />
+		</category>
+	</categories>
+	<policies ><!--Storage for Policy Definitions-->
+
+		<policy name="Policy_Enable_first_run_13" class="Machine" displayName="$(string.String_Policy_Enable_first_run_14)" explainText="$(string.String_Explain_When_this_setting_15)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\CFG" valueName="ShowSetupPopup" >
+			<parentCategory ref="Cat_Dell_Command_Update_3" />
+			<supportedOn ref="SupportedOn_1" />
+			<enabledValue >
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue >
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="Policy_Enable_Lock_Settings_16" class="Machine" displayName="$(string.String_Policy_Enable_Lock_Settings_17)" explainText="$(string.String_Explain_When_this_setting_18)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\CFG" valueName="LockSettings" >
+			<parentCategory ref="Cat_Dell_Command_Update_3" />
+			<supportedOn ref="SupportedOn_1" />
+			<enabledValue >
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue >
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="Policy_Enable_User_Consent_22" class="Machine" displayName="$(string.String_Policy_Enable_User_Consent_23)" explainText="$(string.String_Explain_When_this_setting_24)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\General" valueName="UserConsentDefault" >
+			<parentCategory ref="Cat_Dell_Command_Update_3" />
+			<supportedOn ref="SupportedOn_1" />
+			<enabledValue >
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue >
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="Policy_Enable_the_Default_180" class="Machine" displayName="$(string.String_Policy_Enable_the_Default_181)" explainText="$(string.String_Explain_When_this_setting_182)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\General" >
+			<parentCategory ref="Cat_Dell_Command_Update_3" />
+			<supportedOn ref="SupportedOn_178" />
+			<enabledList >
+				<item key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\General" valueName="EnableDefaultDellCatalog" >
+					<value >
+						<longDecimal value="1" />
+					</value>
+				</item>
+				<item key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\CFG" valueName="EnableDefaultDellCatalog" >
+					<value >
+						<longDecimal value="1" />
+					</value>
+				</item>
+			</enabledList>
+			<disabledList >
+				<item key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\General" valueName="EnableDefaultDellCatalog" >
+					<value >
+						<longDecimal value="0" />
+					</value>
+				</item>
+				<item key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\CFG" valueName="EnableDefaultDellCatalog" >
+					<value >
+						<longDecimal value="0" />
+					</value>
+				</item>
+			</disabledList>
+		</policy>
+		<policy name="Policy_Enable_Autosuspend_25" class="Machine" displayName="$(string.String_Policy_Enable_Autosuspend_26)" explainText="$(string.String_Explain_When_this_setting_27)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\General" valueName="SuspendBitLocker" >
+			<parentCategory ref="Cat_Dell_Command_Update_3" />
+			<supportedOn ref="SupportedOn_1" />
+			<enabledValue >
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue >
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="Policy_Set_the_Download_28" class="Machine" displayName="$(string.String_Policy_Set_the_Download_29)" explainText="$(string.String_Explain_Change_where_the_30)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\General" presentation="$(presentation.Policy_Set_the_Download_28)" >
+			<parentCategory ref="Cat_Dell_Command_Update_3" />
+			<supportedOn ref="SupportedOn_1" />
+			<elements >
+				<text id="Policy_TextBox_Element_Set_the_Download_31" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\General" valueName="DownloadPath" maxLength="255" />
+			</elements>
+		</policy>
+		<policy name="Policy_Custom_Catalog_32" class="Machine" displayName="$(string.String_Policy_Custom_Catalog_33)" explainText="$(string.String_Explain_Set_the_path_to_34)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\General" presentation="$(presentation.Policy_Custom_Catalog_32)" >
+			<parentCategory ref="Cat_Dell_Command_Update_3" />
+			<supportedOn ref="SupportedOn_1" />
+			<elements >
+				<multiText id="Policy_TextBox_Element_Custom_Catalog_35" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\General" valueName="CustomCatalogPaths" />
+			</elements>
+		</policy>
+		<policy name="Policy_Chipset_Drivers_36" class="Machine" displayName="$(string.String_Policy_Chipset_Drivers_37)" explainText="$(string.String_Explain_When_this_setting_38)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\UpdateFilter\DeviceCategory" valueName="IsChipsetSelected" >
+			<parentCategory ref="Cat_Device_Category_5" />
+			<supportedOn ref="SupportedOn_1" />
+			<enabledValue >
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue >
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="Policy_Storage_e_g_Hard_39" class="Machine" displayName="$(string.String_Policy_Storage_e_g_Hard_40)" explainText="$(string.String_Explain_When_this_setting_41)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\UpdateFilter\DeviceCategory" valueName="IsStorageSelected" >
+			<parentCategory ref="Cat_Device_Category_5" />
+			<supportedOn ref="SupportedOn_1" />
+			<enabledValue >
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue >
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="Policy_Video_Drivers_42" class="Machine" displayName="$(string.String_Policy_Video_Drivers_43)" explainText="$(string.String_Explain_When_this_setting_44)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\UpdateFilter\DeviceCategory" valueName="IsVideoSelected" >
+			<parentCategory ref="Cat_Device_Category_5" />
+			<supportedOn ref="SupportedOn_1" />
+			<enabledValue >
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue >
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="Policy_Input_e_g_Mouse_45" class="Machine" displayName="$(string.String_Policy_Input_e_g_Mouse_46)" explainText="$(string.String_Explain_When_this_setting_47)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\UpdateFilter\DeviceCategory" valueName="IsInputSelected" >
+			<parentCategory ref="Cat_Device_Category_5" />
+			<supportedOn ref="SupportedOn_1" />
+			<enabledValue >
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue >
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="Policy_Audio_Drivers_48" class="Machine" displayName="$(string.String_Policy_Audio_Drivers_49)" explainText="$(string.String_Explain_When_this_setting_50)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\UpdateFilter\DeviceCategory" valueName="IsAudioSelected" >
+			<parentCategory ref="Cat_Device_Category_5" />
+			<supportedOn ref="SupportedOn_1" />
+			<enabledValue >
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue >
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="Policy_Network_Drivers_51" class="Machine" displayName="$(string.String_Policy_Network_Drivers_52)" explainText="$(string.String_Explain_When_this_setting_53)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\UpdateFilter\DeviceCategory" valueName="IsNetworkSelected" >
+			<parentCategory ref="Cat_Device_Category_5" />
+			<supportedOn ref="SupportedOn_1" />
+			<enabledValue >
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue >
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="Policy_All_Others_54" class="Machine" displayName="$(string.String_Policy_All_Others_55)" explainText="$(string.String_Explain_When_this_setting_56)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\UpdateFilter\DeviceCategory" valueName="IsDeviceCategoryOtherSelected" >
+			<parentCategory ref="Cat_Device_Category_5" />
+			<supportedOn ref="SupportedOn_1" />
+			<enabledValue >
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue >
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="Policy_Security_Updates_57" class="Machine" displayName="$(string.String_Policy_Security_Updates_58)" explainText="$(string.String_Explain_When_this_setting_59)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\UpdateFilter\RecommendedLevel" valueName="IsSecurityUpdatesSelected" >
+			<parentCategory ref="Cat_Recommended_Levels_7" />
+			<supportedOn ref="SupportedOn_1" />
+			<enabledValue >
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue >
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="Policy_Recommended_Updates_60" class="Machine" displayName="$(string.String_Policy_Recommended_Updates_61)" explainText="$(string.String_Explain_When_this_setting_62)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\UpdateFilter\RecommendedLevel" valueName="IsRecommendedUpdatesSelected" >
+			<parentCategory ref="Cat_Recommended_Levels_7" />
+			<supportedOn ref="SupportedOn_1" />
+			<enabledValue >
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue >
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="Policy_Optional_Updates_63" class="Machine" displayName="$(string.String_Policy_Optional_Updates_64)" explainText="$(string.String_Explain_When_this_setting_65)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\UpdateFilter\RecommendedLevel" valueName="IsOptionalUpdatesSelected" >
+			<parentCategory ref="Cat_Recommended_Levels_7" />
+			<supportedOn ref="SupportedOn_1" />
+			<enabledValue >
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue >
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="Policy_Critical_Updates_66" class="Machine" displayName="$(string.String_Policy_Critical_Updates_67)" explainText="$(string.String_Explain_When_this_setting_68)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\UpdateFilter\RecommendedLevel" valueName="IsCriticalUpdatesSelected" >
+			<parentCategory ref="Cat_Recommended_Levels_7" />
+			<supportedOn ref="SupportedOn_1" />
+			<enabledValue >
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue >
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="Policy_Update_Settings_69" class="Machine" displayName="$(string.String_Policy_Update_Settings_70)" explainText="$(string.String_Explain_When_this_setting_71)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\Schedule" presentation="$(presentation.Policy_Update_Settings_69)" >
+			<parentCategory ref="Cat_Update_Settings_9" />
+			<supportedOn ref="SupportedOn_1" />
+			<elements >
+				<enum id="Policy_DropList_Element_Update_Settings_72" valueName="ScheduleMode" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\Schedule" required="true" >
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_Manual_Updates_73)" >
+						<value >
+							<string >ManualUpdates</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_Automatic_Updates_74)" >
+						<value >
+							<string >AutoUpdates</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_Weekly_75)" >
+						<value >
+							<string >Weekly</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_Monthly_76)" >
+						<value >
+							<string >Monthly</string>
+						</value>
+					</item>
+				</enum>
+				<enum id="Policy_DropList_Element_Update_Settings_77" valueName="DayOfWeek" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\Schedule" required="true" >
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_Sunday_78)" >
+						<value >
+							<string >Sunday</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_Monday_79)" >
+						<value >
+							<string >Monday</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_Tuesday_80)" >
+						<value >
+							<string >Tuesday</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_Wednesday_81)" >
+						<value >
+							<string >Wednesday</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_Thursday_82)" >
+						<value >
+							<string >Thursday</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_Friday_83)" >
+						<value >
+							<string >Friday</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_Saturday_84)" >
+						<value >
+							<string >Saturday</string>
+						</value>
+					</item>
+				</enum>
+				<enum id="Policy_DropList_Element_Update_Settings_85" valueName="Time" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\Schedule" required="true" >
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_12_00_AM_DEFAULT_86)" >
+						<value >
+							<string >00:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_1_00_AM_87)" >
+						<value >
+							<string >01:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_2_00_AM_88)" >
+						<value >
+							<string >02:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_3_00_AM_89)" >
+						<value >
+							<string >03:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_4_00_AM_90)" >
+						<value >
+							<string >04:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_5_00_AM_91)" >
+						<value >
+							<string >05:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_6_00_AM_92)" >
+						<value >
+							<string >06:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_7_00_AM_93)" >
+						<value >
+							<string >07:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_8_00_AM_94)" >
+						<value >
+							<string >08:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_9_00_AM_95)" >
+						<value >
+							<string >09:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_10_00_AM_96)" >
+						<value >
+							<string >10:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_11_00_AM_97)" >
+						<value >
+							<string >11:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_12_00_PM_98)" >
+						<value >
+							<string >12:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_1_00_PM_99)" >
+						<value >
+							<string >13:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_2_00_PM_100)" >
+						<value >
+							<string >14:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_3_00_PM_101)" >
+						<value >
+							<string >15:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_4_00_PM_102)" >
+						<value >
+							<string >16:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_5_00_PM_103)" >
+						<value >
+							<string >17:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_6_00_PM_104)" >
+						<value >
+							<string >18:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_7_00_PM_105)" >
+						<value >
+							<string >19:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_8_00_PM_106)" >
+						<value >
+							<string >20:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_9_00_PM_107)" >
+						<value >
+							<string >21:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_10_00_PM_108)" >
+						<value >
+							<string >22:00:00</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_11_00_PM_109)" >
+						<value >
+							<string >23:00:00</string>
+						</value>
+					</item>
+				</enum>
+				<enum id="Policy_DropList_Element_Update_Settings_110" valueName="DayOfMonth" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\Schedule" required="true" >
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_1_111)" >
+						<value >
+							<string >1</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_2_112)" >
+						<value >
+							<string >2</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_3_113)" >
+						<value >
+							<string >3</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_4_114)" >
+						<value >
+							<string >4</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_5_115)" >
+						<value >
+							<string >5</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_6_116)" >
+						<value >
+							<string >6</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_7_117)" >
+						<value >
+							<string >7</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_8_118)" >
+						<value >
+							<string >8</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_9_119)" >
+						<value >
+							<string >9</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_10_120)" >
+						<value >
+							<string >10</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_11_121)" >
+						<value >
+							<string >11</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_12_122)" >
+						<value >
+							<string >12</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_13_123)" >
+						<value >
+							<string >13</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_14_124)" >
+						<value >
+							<string >14</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_15_125)" >
+						<value >
+							<string >15</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_16_126)" >
+						<value >
+							<string >16</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_17_127)" >
+						<value >
+							<string >17</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_18_128)" >
+						<value >
+							<string >18</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_19_129)" >
+						<value >
+							<string >19</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_20_130)" >
+						<value >
+							<string >20</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_21_131)" >
+						<value >
+							<string >21</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_22_132)" >
+						<value >
+							<string >22</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_23_133)" >
+						<value >
+							<string >23</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_24_134)" >
+						<value >
+							<string >24</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_25_135)" >
+						<value >
+							<string >25</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_26_136)" >
+						<value >
+							<string >26</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_27_137)" >
+						<value >
+							<string >27</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_28_138)" >
+						<value >
+							<string >28</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_29_139)" >
+						<value >
+							<string >29</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_30_140)" >
+						<value >
+							<string >30</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Update_Settings_31_141)" >
+						<value >
+							<string >31</string>
+						</value>
+					</item>
+				</enum>
+			</elements>
+		</policy>
+		<policy name="Policy_Restart_After_Updates_142" class="Machine" displayName="$(string.String_Policy_Restart_After_Updates_143)" explainText="$(string.String_Explain_When_this_setting_144)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\Schedule" presentation="$(presentation.Policy_Restart_After_Updates_142)" >
+			<parentCategory ref="Cat_Update_Settings_9" />
+			<supportedOn ref="SupportedOn_1" />
+			<elements >
+				<enum id="Policy_DropList_Element_Restart_After_Updates_145" valueName="RebootWait" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\Schedule" required="true" >
+					<item displayName="$(string.String_Policy_DropList_Select_Restart_After_Updates_5_Minutes_146)" >
+						<value >
+							<string >FiveMinutes</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Restart_After_Updates_15_Minutes_147)" >
+						<value >
+							<string >FifteenMinutes</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Restart_After_Updates_30_Minutes_148)" >
+						<value >
+							<string >ThirtyMinutes</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_Restart_After_Updates_1_Hour_149)" >
+						<value >
+							<string >OneHour</string>
+						</value>
+					</item>
+				</enum>
+			</elements>
+		</policy>
+		<policy name="Policy_What_to_do_when_150" class="Machine" displayName="$(string.String_Policy_What_to_do_when_151)" explainText="$(string.String_Explain_When_this_setting_152)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\Schedule" presentation="$(presentation.Policy_What_to_do_when_150)" >
+			<parentCategory ref="Cat_Update_Settings_9" />
+			<supportedOn ref="SupportedOn_1" />
+			<elements >
+				<enum id="Policy_DropList_Element_What_to_do_when_153" valueName="AutomationMode" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\Schedule" required="true" >
+					<item displayName="$(string.String_Policy_DropList_Select_What_to_do_when_Notify_only_when_154)" >
+						<value >
+							<string >ScanNotify</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_What_to_do_when_Download_update_155)" >
+						<value >
+							<string >ScanDownloadNotify</string>
+						</value>
+					</item>
+					<item displayName="$(string.String_Policy_DropList_Select_What_to_do_when_Download_and_install_156)" >
+						<value >
+							<string >ScanDownloadApplyNotify</string>
+						</value>
+					</item>
+				</enum>
+			</elements>
+		</policy>
+		<policy name="Policy_Hardware_Drivers_157" class="Machine" displayName="$(string.String_Policy_Hardware_Drivers_158)" explainText="$(string.String_Explain_When_this_setting_159)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\UpdateFilter\UpdateType" valueName="IsDriverSelected" >
+			<parentCategory ref="Cat_Update_Types_11" />
+			<supportedOn ref="SupportedOn_1" />
+			<enabledValue >
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue >
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="Policy_Application_Software_160" class="Machine" displayName="$(string.String_Policy_Application_Software_161)" explainText="$(string.String_Explain_When_this_setting_162)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\UpdateFilter\UpdateType" valueName="IsApplicationSelected" >
+			<parentCategory ref="Cat_Update_Types_11" />
+			<supportedOn ref="SupportedOn_1" />
+			<enabledValue >
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue >
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="Policy_BIOS_Updates_163" class="Machine" displayName="$(string.String_Policy_BIOS_Updates_164)" explainText="$(string.String_Explain_When_this_setting_165)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\UpdateFilter\UpdateType" valueName="IsBiosSelected" >
+			<parentCategory ref="Cat_Update_Types_11" />
+			<supportedOn ref="SupportedOn_1" />
+			<enabledValue >
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue >
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="Policy_Firmware_Updates_166" class="Machine" displayName="$(string.String_Policy_Firmware_Updates_167)" explainText="$(string.String_Explain_When_this_setting_168)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\UpdateFilter\UpdateType" valueName="IsFirmwareSelected" >
+			<parentCategory ref="Cat_Update_Types_11" />
+			<supportedOn ref="SupportedOn_1" />
+			<enabledValue >
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue >
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="Policy_Utility_Software_169" class="Machine" displayName="$(string.String_Policy_Utility_Software_170)" explainText="$(string.String_Explain_When_this_setting_171)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\UpdateFilter\UpdateType" valueName="IsUtilitySelected" >
+			<parentCategory ref="Cat_Update_Types_11" />
+			<supportedOn ref="SupportedOn_1" />
+			<enabledValue >
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue >
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+		<policy name="Policy_All_Others_172" class="Machine" displayName="$(string.String_Policy_All_Others_173)" explainText="$(string.String_Explain_When_this_setting_174)" key="SOFTWARE\Dell\UpdateService\Clients\CommandUpdate\Preferences\Settings\UpdateFilter\UpdateType" valueName="IsUpdateTypeOtherSelected" >
+			<parentCategory ref="Cat_Update_Types_11" />
+			<supportedOn ref="SupportedOn_1" />
+			<enabledValue >
+				<decimal value="1" />
+			</enabledValue>
+			<disabledValue >
+				<decimal value="0" />
+			</disabledValue>
+		</policy>
+	</policies>
+</policyDefinitions>

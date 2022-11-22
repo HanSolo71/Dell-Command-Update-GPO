@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://www.microsoft.com/GroupPolicy/PolicyDefinitions" ><!--Created using ADM Template Editor V4.2.22-->
+<!--Created on 04 Feb 2022 09:47:33-->
+<!--ADM Template Editor is marketed by Syspro. Visit us at www.sysprosoft.com-->
+
+	<displayName >Enter Display Name here</displayName>
+	<description >Dell Command Update</description>
+	<resources >
+		<stringTable ><!--Storage for String Definitions-->
+
+			<string id="String_SupportedOn_Windows_10_Windows_2" >Windows 10, Windows 11</string>
+			<string id="String_SupportedOn_Undefined_179" >Undefined</string>
+			<string id="String_Cat_Dell_Command_Update_4" >Dell Command Update</string>
+			<string id="String_Cat_Device_Category_6" >Device Category</string>
+			<string id="String_Cat_Recommended_Levels_8" >Recommended Levels</string>
+			<string id="String_Cat_Update_Settings_10" >Update Settings</string>
+			<string id="String_Cat_Update_Types_12" >Update Types</string>
+			<string id="String_Policy_Enable_first_run_14" >Enable first run pop-up</string>
+			<string id="String_Explain_When_this_setting_15" >When this setting is enabled, the popup to configure Dell Command Update on the first launch will be displayed</string>
+			<string id="String_Policy_Enable_Lock_Settings_17" >Enable Lock Settings</string>
+			<string id="String_Explain_When_this_setting_18" >When this setting is enabled, the end user will not be able to change any DCU Configuration settings</string>
+			<string id="String_Policy_Enable_User_Consent_23" >Enable User Consent</string>
+			<string id="String_Explain_When_this_setting_24" >When this setting is enabled, Dell will collect usage information for the purpose of improving its products and services.</string>
+			<string id="String_Policy_Enable_the_Default_181" >Enable the Default Dell Catalog</string>
+			<string id="String_Explain_When_this_setting_182" >When this setting is enabled, Dell Command Update will use the default Dell Catalog for updates. When it is disabled, you will need to specify a custom catalog for Dell Command Update to use. If you disable this, without specify a custom catalog XML file, DCU will not work.</string>
+			<string id="String_Policy_Enable_Autosuspend_26" >Enable Autosuspend bitlocker</string>
+			<string id="String_Explain_When_this_setting_27" >When this setting is enabled, you can set BitLocker to be suspended during BIOS updates. Note: BIOS updates will be blocked on BitLocker encrypted drives if this not enabled</string>
+			<string id="String_Policy_Set_the_Download_29" >Set the Download Path</string>
+			<string id="String_Explain_Change_where_the_30" >Change where the update files are stored. Note: files are automatically deleted from this location after installation.</string>
+			<string id="String_Policy_Custom_Catalog_33" >Custom Catalog location</string>
+			<string id="String_Explain_Set_the_path_to_34" >When enabled you can set the path to the custom catalog XML. You need to disable the Default Dell Catalog for this setting to take effect.
+
+Examples: 
+C:\Temp\custom.xml
+
+\\server\share\custom.xml
+
+http:\\webserver\custom.xml</string>
+			<string id="String_Policy_Chipset_Drivers_37" >Chipset Drivers</string>
+			<string id="String_Explain_When_this_setting_38" >When this setting is enabled, Chipset drivers will be included</string>
+			<string id="String_Policy_Storage_e_g_Hard_40" >Storage (e.g. Hard drive, CD/DVD) Drivers</string>
+			<string id="String_Explain_When_this_setting_41" >When this setting is enabled, Storage drivers will be included</string>
+			<string id="String_Policy_Video_Drivers_43" >Video Drivers</string>
+			<string id="String_Explain_When_this_setting_44" >When this setting is enabled, Video drivers will be included</string>
+			<string id="String_Policy_Input_e_g_Mouse_46" >Input (e.g. Mouse, Keyboard) Drivers</string>
+			<string id="String_Explain_When_this_setting_47" >When this setting is enabled, Input drivers will be included</string>
+			<string id="String_Policy_Audio_Drivers_49" >Audio Drivers</string>
+			<string id="String_Explain_When_this_setting_50" >When this setting is enabled, Audio drivers will be included</string>
+			<string id="String_Policy_Network_Drivers_52" >Network Drivers</string>
+			<string id="String_Explain_When_this_setting_53" >When this setting is enabled, Network drivers will be included</string>
+			<string id="String_Policy_All_Others_55" >All Others</string>
+			<string id="String_Explain_When_this_setting_56" >When this setting is enabled, All Other drivers will be included</string>
+			<string id="String_Policy_Security_Updates_58" >Security Updates</string>
+			<string id="String_Explain_When_this_setting_59" >When this setting is enabled, Security Updates will be included</string>
+			<string id="String_Policy_Recommended_Updates_61" >Recommended Updates</string>
+			<string id="String_Explain_When_this_setting_62" >When this setting is enabled, Recommended Updates will be included</string>
+			<string id="String_Policy_Optional_Updates_64" >Optional Updates</string>
+			<string id="String_Explain_When_this_setting_65" >When this setting is enabled, Optional Updates will be included</string>
+			<string id="String_Policy_Critical_Updates_67" >Critical Updates</string>
+			<string id="String_Explain_When_this_setting_68" >When this setting is enabled, Critical Updates will be included</string>
+			<string id="String_Policy_Update_Settings_70" >Update Settings</string>
+			<string id="String_Explain_When_this_setting_71" >When this setting is enabled, you can set the update schedule. If left &quot;Not configured&quot; the default is Manual updates</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Manual_Updates_73" >Manual Updates</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Automatic_Updates_74" >Automatic Updates</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Weekly_75" >Weekly</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Monthly_76" >Monthly</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Sunday_78" >Sunday</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Monday_79" >Monday</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Tuesday_80" >Tuesday</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Wednesday_81" >Wednesday</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Thursday_82" >Thursday</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Friday_83" >Friday</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Saturday_84" >Saturday</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_12_00_AM_DEFAULT_86" >12:00 AM&quot; DEFAULT</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_1_00_AM_87" >1:00 AM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_2_00_AM_88" >2:00 AM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_3_00_AM_89" >3:00 AM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_4_00_AM_90" >4:00 AM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_5_00_AM_91" >5:00 AM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_6_00_AM_92" >6:00 AM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_7_00_AM_93" >7:00 AM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_8_00_AM_94" >8:00 AM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_9_00_AM_95" >9:00 AM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_10_00_AM_96" >10:00 AM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_11_00_AM_97" >11:00 AM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_12_00_PM_98" >12:00 PM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_1_00_PM_99" >1:00 PM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_2_00_PM_100" >2:00 PM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_3_00_PM_101" >3:00 PM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_4_00_PM_102" >4:00 PM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_5_00_PM_103" >5:00 PM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_6_00_PM_104" >6:00 PM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_7_00_PM_105" >7:00 PM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_8_00_PM_106" >8:00 PM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_9_00_PM_107" >9:00 PM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_10_00_PM_108" >10:00 PM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_11_00_PM_109" >11:00 PM</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_1_111" >1</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_2_112" >2</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_3_113" >3</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_4_114" >4</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_5_115" >5</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_6_116" >6</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_7_117" >7</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_8_118" >8</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_9_119" >9</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_10_120" >10</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_11_121" >11</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_12_122" >12</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_13_123" >13</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_14_124" >14</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_15_125" >15</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_16_126" >16</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_17_127" >17</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_18_128" >18</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_19_129" >19</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_20_130" >20</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_21_131" >21</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_22_132" >22</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_23_133" >23</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_24_134" >24</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_25_135" >25</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_26_136" >26</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_27_137" >27</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_28_138" >28</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_29_139" >29</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_30_140" >30</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_31_141" >31</string>
+			<string id="String_Policy_Restart_After_Updates_143" >Restart After Updates</string>
+			<string id="String_Explain_When_this_setting_144" >When this setting is enabled, you can set the interval for automatic restart when required</string>
+			<string id="String_Policy_DropList_Select_Restart_After_Updates_5_Minutes_146" >5 Minutes</string>
+			<string id="String_Policy_DropList_Select_Restart_After_Updates_15_Minutes_147" >15 Minutes</string>
+			<string id="String_Policy_DropList_Select_Restart_After_Updates_30_Minutes_148" >30 Minutes</string>
+			<string id="String_Policy_DropList_Select_Restart_After_Updates_1_Hour_149" >1 Hour</string>
+			<string id="String_Policy_What_to_do_when_151" >What to do when updates are found</string>
+			<string id="String_Explain_When_this_setting_152" >When this setting is enabled you can configure what happens when updates are found</string>
+			<string id="String_Policy_DropList_Select_What_to_do_when_Notify_only_when_154" >Notify only (when updates are available)</string>
+			<string id="String_Policy_DropList_Select_What_to_do_when_Download_update_155" >Download update (Notify when ready to install)</string>
+			<string id="String_Policy_DropList_Select_What_to_do_when_Download_and_install_156" >Download and install updates (Notify after complete)</string>
+			<string id="String_Policy_Hardware_Drivers_158" >Hardware Drivers</string>
+			<string id="String_Explain_When_this_setting_159" >When this setting is enabled, Hardware updates will be included</string>
+			<string id="String_Policy_Application_Software_161" >Application Software (e.g. Dell Command | Update)</string>
+			<string id="String_Explain_When_this_setting_162" >When this setting is enabled, Application Updates will be included</string>
+			<string id="String_Policy_BIOS_Updates_164" >BIOS Updates</string>
+			<string id="String_Explain_When_this_setting_165" >When this setting is enabled, BIOS Updates will be included</string>
+			<string id="String_Policy_Firmware_Updates_167" >Firmware Updates</string>
+			<string id="String_Explain_When_this_setting_168" >When this setting is enabled, Firmware will be included</string>
+			<string id="String_Policy_Utility_Software_170" >Utility Software</string>
+			<string id="String_Explain_When_this_setting_171" >When this setting is enabled, Utility Software will be included</string>
+			<string id="String_Policy_All_Others_173" >All Others</string>
+			<string id="String_Explain_When_this_setting_174" >When this setting is enabled, All Other updates will be included</string>
+		</stringTable>
+		<presentationTable ><!--Storage for Presentation Definitions-->
+
+			<presentation id="Policy_Set_the_Download_28" >
+				<textBox refId="Policy_TextBox_Element_Set_the_Download_31" >
+					<label >Enter the path here</label>
+					<defaultValue >C:\ProgramData\Dell\UpdateService\Downloads</defaultValue>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Custom_Catalog_32" >
+				<multiTextBox refId="Policy_TextBox_Element_Custom_Catalog_35" />
+			</presentation>
+			<presentation id="Policy_Update_Settings_69" >
+				<dropdownList refId="Policy_DropList_Element_Update_Settings_72" defaultItem="0" noSort="true">Select the update interval:</dropdownList>
+				<dropdownList refId="Policy_DropList_Element_Update_Settings_77" defaultItem="0" noSort="true">Select the day of the week to perform updates (Only required when selecting &quot;Weekly&quot;)</dropdownList>
+				<dropdownList refId="Policy_DropList_Element_Update_Settings_85" defaultItem="0" noSort="true">Select the time of day to start updates (Only applies when selecting &quot;Weekly&quot; or &quot;Monthly&quot; for the update interval)</dropdownList>
+				<dropdownList refId="Policy_DropList_Element_Update_Settings_110" defaultItem="0" noSort="true">Select the day of Month (Only required when selecting &quot;Monthly&quot;)</dropdownList>
+			</presentation>
+			<presentation id="Policy_Restart_After_Updates_142" >
+				<dropdownList refId="Policy_DropList_Element_Restart_After_Updates_145" defaultItem="0" noSort="true">Select the amount of time to wait to automatically restart when required</dropdownList>
+			</presentation>
+			<presentation id="Policy_What_to_do_when_150" >
+				<dropdownList refId="Policy_DropList_Element_What_to_do_when_153" defaultItem="0" noSort="true">Select what to do when updates are found</dropdownList>
+			</presentation>
+		</presentationTable>
+	</resources>
+</policyDefinitionResources>
