@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<displayName >Enter Display Name here</displayName>
+	<description >Dell Command Update</description>
+	<resources >
+		<stringTable ><!--Storage for String Definitions-->
+
+			<string id="String_SupportedOn_Windows_10_Windows_2" >Windows 10, Windows 11</string>
+			<string id="String_SupportedOn_Undefined_179" >Unbestimmt</string>
+			<string id="String_Cat_Dell_Command_Update_4" >Dell Command Update</string>
+			<string id="String_Cat_Device_Category_6" >Gerätekategorie</string>
+			<string id="String_Cat_Recommended_Levels_8" >Empfohlene Stufen</string>
+			<string id="String_Cat_Update_Settings_10" >Update Einstellungen</string>
+			<string id="String_Cat_Update_Types_12" >Update Typen</string>
+			<string id="String_Policy_Enable_first_run_14" >Popup-Fenster für den ersten Lauf aktivieren</string>
+			<string id="String_Explain_When_this_setting_15" >Wenn diese Einstellung aktiviert ist, wird das Popup-Fenster zur Konfiguration von Dell Command Update beim ersten Start angezeigt</string>
+			<string id="String_Policy_Enable_Lock_Settings_17" >Aktivieren der Sperreinstellungen</string>
+			<string id="String_Explain_When_this_setting_18" >Wenn diese Einstellung aktiviert ist, kann der Endbenutzer keine DCU-Konfigurationseinstellungen ändern.</string>
+			<string id="String_Policy_Enable_User_Consent_23" >Benutzerzustimmung aktivieren</string>
+			<string id="String_Policy_Allow_Catalog_xml" >Katalog-XML-Dateien zulassen</string>
+			<string id="String_Explain_When_this_setting_24" >Wenn diese Einstellung aktiviert ist, sammelt Dell Nutzungsdaten, um seine Produkte und Dienstleistungen zu verbessern.</string>
+			<string id="String_Policy_Allow_Catalog_xml_text" >Wenn diese Einstellung aktiviert ist, werden Katalog-XML-Dateien aktiviert.</string>
+			<string id="String_Policy_Enable_the_Default_181" >Aktiviert den Standard-Dell-Katalog</string>
+			<string id="String_Explain_When_this_setting_182" >Wenn diese Einstellung aktiviert ist, verwendet Dell Command Update den Standardkatalog von Dell für Updates. Wenn sie deaktiviert ist, müssen Sie einen benutzerdefinierten Katalog angeben, den Dell Command Update verwenden soll. Wenn Sie diese Einstellung deaktivieren, ohne eine benutzerdefinierte Katalog-XML-Datei anzugeben, funktioniert DCU nicht.</string>
+			<string id="String_Policy_Enable_Autosuspend_26" >Automatisch pausierung für Bitlocker einschalten</string>
+			<string id="String_Explain_When_this_setting_27" >Wenn diese Einstellung aktiviert ist, können Sie festlegen, dass BitLocker während BIOS-Aktualisierungen ausgesetzt wird. Hinweis: BIOS-Aktualisierungen werden auf BitLocker-verschlüsselten Laufwerken blockiert, wenn diese Einstellung nicht aktiviert ist.</string>
+			<string id="String_Policy_Set_the_Download_29" >Festlegen des Download-Pfads</string>
+			<string id="String_Policy_Configure_Driver_Library" >Treiberbibliothek konfigurieren</string>
+			<string id="String_Policy_Configure_Driver_Library_text" >Legen Sie den Pfad der Treiberbibliothek fest (es sollten keine eingeschränkten Pfade hinzugefügt werden).</string>			
+			<string id="String_Policy_Configure_Proxy" >Proxy-Einstellungen konfigurieren</string>
+			<string id="String_Policy_Configure_Proxy_text" >Proxy-Einstellungen konfigurieren (Server/Port)</string>			
+			<string id="String_Policy_Configure_Proxy_auth" >Konfigurieren der Proxy-Authentifizierung</string>
+			<string id="String_Policy_Configure_Proxy_auth_text" >Konfigurieren der Proxy-Authentifizierung (Benutzername)</string>
+			<string id="String_Policy_Disable_ADR" >ADR deaktivieren</string>
+			<string id="String_Policy_Disable_ADR_text" >Wenn diese Einstellung aktiviert ist, wird die erweiterte Treiberwiederherstellung (ADR) auf dem Willkommensbildschirm nicht unter den Treiberaktualisierungen angezeigt.</string>
+			<string id="String_Policy_Disable_Notifications" >Disable Notifications (Benachrichtigungen deaktivieren)</string>
+			<string id="String_Policy_Disable_Notifications_text" >Alle Benachrichtigungen außer dem obligatorischen geplanten Neustart unterdrücken</string>	
+			<string id="String_Policy_Filter_Applicable_Mode" >Welche Updates angezeigt werden sollen</string>
+            <string id="String_Policy_Filter_Applicable_Mode_text" >Empfohlene Updates oder alle zutreffenden Updates filtern</string>			
+			<string id="String_Policy_Maximum_Retry_Attempts" >Maximale Wiederholungsversuche</string>
+			<string id="String_Policy_Maximum_Retry_Attempts_text" >Wiederholte Versuche, fehlgeschlagene Updates zu installieren (gilt sowohl für manuelle als auch für geplante Aktivitäten)</string>
+			<string id="String_Explain_Change_where_the_30" >Ändern Sie den Ort, an dem die Aktualisierungsdateien gespeichert werden. Hinweis: Die Dateien werden nach der Installation automatisch von diesem Speicherort gelöscht. (Es sollten keine eingeschränkten Pfade hinzugefügt werden)</string>
+			<string id="String_Policy_Chipset_Drivers_37" >Chipsatz-Treiber</string>
+			<string id="String_Explain_When_this_setting_38" >Wenn diese Einstellung aktiviert ist, werden die Chipsatztreiber einbezogen.</string>
+			<string id="String_Policy_Storage_e_g_Hard_40" >Speicher (z. B. Festplatte, CD/DVD) Treiber</string>
+			<string id="String_Explain_When_this_setting_41" >Wenn diese Einstellung aktiviert ist, werden die Speichertreiber einbezogen.</string>
+			<string id="String_Policy_Video_Drivers_43" >Video-Treiber</string>
+			<string id="String_Explain_When_this_setting_44" >Wenn diese Einstellung aktiviert ist, werden die Videotreiber einbezogen.</string>
+			<string id="String_Policy_Input_e_g_Mouse_46" >Treiber für Eingaben (z. B. Maus, Tastatur)</string>
+			<string id="String_Explain_When_this_setting_47" >Wenn diese Einstellung aktiviert ist, werden die Eingabetreiber einbezogen.</string>
+			<string id="String_Policy_Audio_Drivers_49" >Audio-Treiber</string>
+			<string id="String_Explain_When_this_setting_50" >Wenn diese Einstellung aktiviert ist, werden die Audiotreiber einbezogen</string>
+			<string id="String_Policy_Network_Drivers_52" >Netzwerk-Treiber</string>
+			<string id="String_Explain_When_this_setting_53" >Wenn diese Einstellung aktiviert ist, werden die Netzwerktreiber einbezogen.</string>
+			<string id="String_Policy_All_Others_55" >Alle anderen</string>
+			<string id="String_Explain_When_this_setting_56" >Wenn diese Einstellung aktiviert ist, werden alle anderen Treiber einbezogen.</string>
+			<string id="String_Policy_Security_Updates_58" >Sicherheits-Updates</string>
+			<string id="String_Explain_When_this_setting_59" >Wenn diese Einstellung aktiviert ist, werden die Sicherheitsupdates einbezogen.</string>
+			<string id="String_Policy_Recommended_Updates_61" >Empfohlene Updates</string>
+			<string id="String_Explain_When_this_setting_62" >Wenn diese Einstellung aktiviert ist, werden die empfohlenen Updates einbezogen.</string>
+			<string id="String_Policy_Optional_Updates_64" >Optionale Aktualisierungen</string>
+			<string id="String_Explain_When_this_setting_65" >Wenn diese Einstellung aktiviert ist, werden optionale Updates einbezogen.</string>
+			<string id="String_Policy_Critical_Updates_67" >Kritische Updates</string>
+			<string id="String_Explain_When_this_setting_68" >Wenn diese Einstellung aktiviert ist, werden kritische Updates einbezogen.</string>
+			<string id="String_Policy_Update_Settings_70" >Update Einstellungen </string>
+			<string id="String_Explain_When_this_setting_71" >Wenn diese Einstellung aktiviert ist, können Sie den Aktualisierungsplan festlegen. Wenn die Einstellung &quot;Nicht konfiguriert&quot; belassen wird, ist die Standardeinstellung Manuelle Updates</string>
+			<string id="String_Policy_DropList_Filter_ShowOnlyForSystemConfig" >Updates für diese Systemkonfiguration (empfohlen)</string>
+			<string id="String_Policy_DropList_Filter_ShowAllForPlatform" >Alle Updates für das Systemmodell</string>						
+			<string id="String_Policy_DropList_Select_Update_Settings_Manual_Updates_73" >Manuelle Updates</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Automatic_Updates_74" >Automatische Updates</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Daily" >Täglich</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Weekly_75" >Wöchentlich</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Monthly_76" >Monatlich</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Sunday_78" >Sonntag</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Monday_79" >Montag</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Tuesday_80" >Dienstag</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Wednesday_81" >Mittwoch</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Thursday_82" >Donnerstag</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Friday_83" >Freitag</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_Saturday_84" >Samstag</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_12_00_AM_DEFAULT_86" >12:00 UHR&quot; DEFAULT</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_1_00_AM_87" >1:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_2_00_AM_88" >2:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_3_00_AM_89" >3:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_4_00_AM_90" >4:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_5_00_AM_91" >5:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_6_00_AM_92" >6:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_7_00_AM_93" >7:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_8_00_AM_94" >8:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_9_00_AM_95" >9:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_10_00_AM_96" >10:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_11_00_AM_97" >11:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_12_00_PM_98" >12:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_1_00_PM_99" >1:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_2_00_PM_100" >2:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_3_00_PM_101" >3:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_4_00_PM_102" >4:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_5_00_PM_103" >5:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_6_00_PM_104" >6:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_7_00_PM_105" >7:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_8_00_PM_106" >8:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_9_00_PM_107" >9:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_10_00_PM_108" >10:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_11_00_PM_109" >11:00 UHR</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_1_111" >1</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_2_112" >2</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_3_113" >3</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_4_114" >4</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_5_115" >5</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_6_116" >6</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_7_117" >7</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_8_118" >8</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_9_119" >9</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_10_120" >10</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_11_121" >11</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_12_122" >12</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_13_123" >13</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_14_124" >14</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_15_125" >15</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_16_126" >16</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_17_127" >17</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_18_128" >18</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_19_129" >19</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_20_130" >20</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_21_131" >21</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_22_132" >22</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_23_133" >23</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_24_134" >24</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_25_135" >25</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_26_136" >26</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_27_137" >27</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_28_138" >28</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_29_139" >29</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_30_140" >30</string>
+			<string id="String_Policy_DropList_Select_Update_Settings_31_141" >31</string>
+			<string id="String_Policy_Restart_After_Updates_143" >Neustart nach Updates</string>
+			<string id="String_Explain_When_this_setting_144" >Wenn diese Einstellung aktiviert ist, können Sie das Intervall für den automatischen Neustart bei Bedarf festlegen</string>
+			<string id="String_Policy_DropList_Select_Restart_After_Updates_5_Minutes_146" >5 Minuten</string>
+			<string id="String_Policy_DropList_Select_Restart_After_Updates_15_Minutes_147" >15 Minuten</string>
+			<string id="String_Policy_DropList_Select_Restart_After_Updates_30_Minutes_148" >30 Minuten</string>
+			<string id="String_Policy_DropList_Select_Restart_After_Updates_1_Hour_149" >1 Stunde</string>
+			<string id="String_Policy_What_to_do_when_151" >Was ist zu tun, wenn Updates gefunden werden?</string>
+			<string id="String_Policy_Configure_deferral" >Einstellungen für den Aufschub konfigurieren</string>
+			<string id="String_Policy_Configure_deferral_text" >Konfigurieren Sie die Einstellungen für den Aufschub der Installation und den Neustart des Systems, indem Sie die Option "Was tun, wenn Updates gefunden werden" auf "Update herunterladen und installieren (nach Abschluss benachrichtigen)" setzen und die Option "Benachrichtigungen deaktivieren" </string>
+			<string id="String_Explain_When_this_setting_152" >Wenn diese Einstellung aktiviert ist, können Sie konfigurieren, was passiert, wenn Updates gefunden werden</string>
+			<string id="String_Policy_DropList_Select_What_to_do_when_Notify_only_when_154" >Nur benachrichtigen (wenn Updates verfügbar sind)</string>
+			<string id="String_Policy_DropList_Select_What_to_do_when_Download_update_155" >Update herunterladen (Benachrichtigung, wenn bereit zur Installation)</string>
+			<string id="String_Policy_DropList_Select_What_to_do_when_Download_and_install_156" >Updates herunterladen und installieren (nach Abschluss benachrichtigen)</string>
+			<string id="String_Policy_Hardware_Drivers_158" >Hardware-Treiber</string>
+			<string id="String_Policy_DropList_Select_Maximum_Retry_Attempts_2" >2</string>
+			<string id="String_Policy_DropList_Select_Maximum_Retry_Attempts_3" >3</string>
+			<string id="String_Explain_When_this_setting_159" >Wenn diese Einstellung aktiviert ist, werden Hardware-Updates einbezogen.</string>
+			<string id="String_Policy_Application_Software_161" >Anwendungssoftware (z. B. Dell Command | Update)</string>
+			<string id="String_Explain_When_this_setting_162" >Wenn diese Einstellung aktiviert ist, werden Anwendungsupdates einbezogen.</string>
+			<string id="String_Policy_BIOS_Updates_164" >BIOS Updates</string>
+			<string id="String_Explain_When_this_setting_165" >Wenn diese Einstellung aktiviert ist, werden BIOS-Updates einbezogen.</string>
+			<string id="String_Policy_Firmware_Updates_167" >Firmware Updates</string>
+			<string id="String_Explain_When_this_setting_168" >Wenn diese Einstellung aktiviert ist, wird die Firmware einbezogen.</string>
+			<string id="String_Policy_Utility_Software_170" >Software für Dienstprogramme</string>
+			<string id="String_Explain_When_this_setting_171" >Wenn diese Einstellung aktiviert ist, wird die Utility Software mitgeliefert.</string>
+			<string id="String_Policy_All_Others_173" >Alle anderen</string>
+			<string id="String_Explain_When_this_setting_174" >Wenn diese Einstellung aktiviert ist, werden alle anderen Aktualisierungen einbezogen.</string>
+		</stringTable>
+		<presentationTable ><!--Storage for Presentation Definitions-->
+
+			<presentation id="Policy_Set_the_Download_28" >
+				<textBox refId="Policy_TextBox_Element_Set_the_Download_31" >
+					<label >Geben Sie hier den Pfad ein</label>
+					<defaultValue >C:\ProgramData\Dell\UpdateService\Downloads</defaultValue>
+				</textBox>
+			</presentation>			
+			
+			<presentation id="Policy_Configure_Driver_library" >
+				<textBox refId="Policy_TextBox_Element_Configure_driver_library_path" >
+					<label >Geben Sie hier den Pfad ein (CAB/EXE-Dateien sollten bereitgestellt werden)</label>
+				</textBox>
+			</presentation>
+			<presentation id="Policy_Update_Filter" >
+                <dropdownList refId="Policy_DropList_Element_Filter_Applicable_Mode" defaultItem="0" noSort="true">What to display:</dropdownList>
+			</presentation>
+			<presentation id="Policy_Update_Settings_69" >
+				<dropdownList refId="Policy_DropList_Element_Update_Settings_72" defaultItem="0" noSort="true">Wählen Sie das Aktualisierungsintervall:</dropdownList>
+				<dropdownList refId="Policy_DropList_Element_Update_Settings_77" defaultItem="0" noSort="true">Wählen Sie den Wochentag aus, an dem Aktualisierungen durchgeführt werden sollen (nur erforderlich, wenn Sie &quot;Wöchentlich&quot; auswählen) </dropdownList>
+				<dropdownList refId="Policy_DropList_Element_Update_Settings_85" defaultItem="0" noSort="true">Wählen Sie die Tageszeit, zu der die Aktualisierungen beginnen sollen (Gilt nur bei Auswahl von &quot;Täglich&quot; or &quot;Wöchentlich&quot; or &quot;Monatlich&quot; für das Aktualisierungsintervall)</dropdownList>
+				<dropdownList refId="Policy_DropList_Element_Update_Settings_110" defaultItem="0" noSort="true">Wählen Sie den Tag des Monats (nur erforderlich, bei &quot;Monatlich&quot;)</dropdownList>
+				
+			</presentation>
+			<presentation id="Policy_Restart_After_Updates_142" >
+				<dropdownList refId="Policy_DropList_Element_Restart_After_Updates_145" defaultItem="0" noSort="true">Wählen Sie die Wartezeit für den automatischen Neustart bei Bedarf</dropdownList>
+			</presentation>
+			<presentation id="Policy_What_to_do_when_150" >
+				<dropdownList refId="Policy_DropList_Element_What_to_do_when_153" defaultItem="0" noSort="true">Wählen Sie aus, was geschehen soll, wenn Aktualisierungen gefunden werden</dropdownList>
+			</presentation>
+			<presentation id="Policy_Configure_deferral_placeholder" >
+			
+				<textBox refId="Installation_Deferral_Interval">
+					<label >Intervall für den Aufschub der Installation (Stunden (1-99))</label>
+					<defaultValue >1</defaultValue>
+				</textBox>
+				
+				<textBox refId="Installation_Deferral_Count" >
+					<label >Anzahl der Aufschübe (1-9)</label>
+					<defaultValue >1</defaultValue>
+				</textBox>
+				
+				<textBox refId="System_Restart_Deferral_Interval" >
+					<label >Intervall für den Aufschub des Systemneustarts (Stunden (1-99))</label>
+					<defaultValue >1</defaultValue>
+				</textBox>
+				
+				<textBox refId="System_Restart_Deferral_Count" >
+					<label >Anzahl der Aufschübe für den Neustart des Systems (1-9)</label>
+					<defaultValue >1</defaultValue>
+				</textBox>
+				
+				
+				
+			</presentation>
+			
+			<presentation id="Policy_Configure_proxy_placeholder" >
+				<textBox refId="Policy_TextBox_Element_Configure_proxy_server">
+				  <label>Proxy Server:</label>
+				</textBox>
+				<text>Proxy port</text>
+				<decimalTextBox refId="Policy_TextBox_Element_Configure_proxy_port"></decimalTextBox>				
+			</presentation>			
+			
+			<presentation id="Configure_proxy_authentication_placeholder" >
+				<textBox refId="Policy_TextBox_Element_Configure_proxy_auth_username">
+				  <label>Die Proxy-Einstellungen sollten so konfiguriert werden, dass eine Authentifizierung erfolgt. Proxy-Benutzername:</label>
+				</textBox>			
+			</presentation>
+			
+			
+			<presentation id="Policy_Maximum_Retry_Attempts_dropdown" >
+				<dropdownList refId="Policy_DropList_Element_Maximum_Retry_Attempts" defaultItem="0" noSort="true">Wählen Sie die Anzahl der Wiederholungsversuche zur Installation fehlgeschlagener Updates</dropdownList>
+			</presentation>
+		</presentationTable>
+	</resources></policyDefinitionResources>
